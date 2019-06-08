@@ -1,2 +1,2 @@
-# spring-fibanacci-service
+# spring-fibonacci-service
 Fibonacci number calculator
