@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>spring-fibanacci-service</artifactId>
+	<artifactId>spring-fibonacci-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-fibanacci-service</name>
-	<description>Calculating Fibanacci Number</description>
+	<name>spring-fibonacci-service</name>
+	<description>Calculating Fibonacci Number</description>
 
 	<properties>
 		<java.version>1.8</java.version>
