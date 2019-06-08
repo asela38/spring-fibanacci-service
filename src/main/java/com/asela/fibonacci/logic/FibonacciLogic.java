@@ -1,5 +1,9 @@
 package com.asela.fibonacci.logic;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class FibonacciLogic {
 
     public  int fibonacci(int n) {

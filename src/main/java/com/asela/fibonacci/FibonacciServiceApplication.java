@@ -1,7 +1,8 @@
-package com.asela.fibonacci.main;
+package com.asela.fibonacci;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class FibonacciServiceApplication {
