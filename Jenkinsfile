@@ -5,11 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh "clean package site"
             }
         }
-        stage('Test') {
+        stage('Archive') {
             steps {
                 echo 'Testing..'
+                archiveArtifacts "${project_path}/target/*.jar"
+                publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '${project_path}/site', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
             }
         }
         stage('Deploy') {
