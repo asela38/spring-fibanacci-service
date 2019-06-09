@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "mvn clean package"
+                sh "mvn clean package site"
             }
         }
         stage('Archive') {
             steps {
                 echo 'Testing..'
-                archiveArtifacts "${project_path}/target/*.jar"
-                publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '${project_path}/site', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+                archiveArtifacts "target/*.jar"
+                publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/site', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
             }
         }
         stage('Deploy') {
